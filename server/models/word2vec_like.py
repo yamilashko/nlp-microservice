@@ -3,12 +3,7 @@ from sklearn.decomposition import TruncatedSVD
 from server.models.bow import bow_matrix
 
 def word_vectors(texts: List[str], n_components: int = 3) -> Dict[str, Any]:
-    """
-    'word2vec-like' (учебный вариант):
-    - строим BoW (doc x word)
-    - transpose => (word x doc)
-    - SVD => компактные вектора слов
-    """
+
     vocab, bow = bow_matrix(texts)  # (n_docs, n_words)
     word_doc = bow.T               # (n_words, n_docs)
 
