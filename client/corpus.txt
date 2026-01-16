@@ -1,0 +1,4 @@
+Natural language processing is fun.
+FastAPI makes it easy to build microservices.
+NLTK provides tools for tokenization and tagging.
+TF IDF and Bag of Words are classic text representations.
