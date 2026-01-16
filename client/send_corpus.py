@@ -1,19 +1,8 @@
-"""
-Клиентский скрипт:
-- генерирует корпус
-- отправляет запросы на сервер
-- печатает ответы
-
-Запуск:
-python client/send_corpus.py
-"""
-
 import requests
 
 SERVER = "http://127.0.0.1:8000"
 
 def get_corpus():
-    # Можно заменить на чтение из файла — для простоты корпус прямо тут.
     return [
         "Natural language processing is fun.",
         "FastAPI makes it easy to build microservices.",
