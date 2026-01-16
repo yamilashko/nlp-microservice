@@ -12,17 +12,12 @@ def stemming(tokens: List[str]) -> List[str]:
     return [stemmer.stem(t) for t in tokens]
 
 def lemmatization(tokens: List[str]) -> List[str]:
-    # Упрощенно: без передачи POS в lemmatizer (для учебного проекта ок)
     return [lemmatizer.lemmatize(t) for t in tokens]
 
 def pos_tagging(tokens: List[str]) -> List[List[str]]:
     return [[w, tag] for w, tag in pos_tag(tokens)]
 
 def ner(tokens: List[str]) -> List[Dict[str, str]]:
-    """
-    NER в NLTK обычно делают через ne_chunk над POS-tagged токенами.
-    Возвращаем список найденных сущностей.
-    """
     tree = ne_chunk(pos_tag(tokens))
     entities: List[Dict[str, str]] = []
 
