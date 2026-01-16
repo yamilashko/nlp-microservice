@@ -1,9 +1,3 @@
-"""
-Скачивание нужных ресурсов NLTK.
-Запускай один раз:
-python -m server.preprocessing.nltk_download
-"""
-
 import nltk
 
 def main():
