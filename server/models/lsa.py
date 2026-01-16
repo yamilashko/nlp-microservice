@@ -3,13 +3,7 @@ from sklearn.decomposition import TruncatedSVD
 from server.models.tfidf import tfidf_matrix
 
 def lsa(texts: List[str], n_components: int = 2) -> Dict[str, Any]:
-    """
-    LSA = SVD над TF-IDF.
-    Возвращаем вектора документов и долю объясненной дисперсии.
-    """
-    vocab, tfidf = tfidf_matrix(texts)
 
-    # защита от слишком больших n_components
     if tfidf.shape[1] <= 1:
         n_components = 1
     else:
