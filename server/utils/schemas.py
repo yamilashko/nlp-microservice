@@ -2,7 +2,6 @@ from pydantic import BaseModel, Field
 from typing import List, Dict, Any
 
 class CorpusRequest(BaseModel):
-    # texts — список строк (корпус)
     texts: List[str] = Field(..., description="Список текстов корпуса")
 
 class BoWResponse(BaseModel):
